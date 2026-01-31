@@ -85,3 +85,32 @@ function playRound(computerChoice, humanChoice) {
 
     }
 }
+
+// playGame function calls PlayRound() 5 times and logs winner at the end
+function playGame() {
+
+    console.log("You will play 5 rounds of Rock paper scissors!");
+
+    const showGameScore = () => console.log(`Score: Computer: ${computerScore} | Human: ${humanScore}`);
+
+    for (let i = 1; i <= 5; ++i) {
+        console.log(`Round ${i}:`);
+        playRound(getComputerChoice(), getHumanChoice());
+        showGameScore();
+    }
+
+    console.log("Final score:");
+    showGameScore();
+
+    if (humanScore > computerScore) {
+        console.log("Game over: Human wins!");
+    }
+    else if (humanScore < computerScore) {
+        console.log("Game over: Computer Wins!");
+    }
+    else {
+        console.log("Game over: Draw!");
+    }
+}
+
+playGame()
