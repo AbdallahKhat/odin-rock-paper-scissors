@@ -2,6 +2,8 @@
 
 A browser-based Rock–Paper–Scissors game built as part of **The Odin Project Foundations** curriculum using **JavaScript**.
 
+This version features a simple GUI with buttons to select moves, a scoreboard, and a winner display.
+
 ---
 
 ## How to Play
@@ -9,18 +11,15 @@ A browser-based Rock–Paper–Scissors game built as part of **The Odin Project
 **Try it online:** [Play the Game](https://abdallahkhat.github.io/odin-rock-paper-scissors/)
 
 
-Open the **browser console** to see the results:  
-   - **Windows/Linux:** Press `Ctrl + Shift + I` and go to the **Console** tab  
-   - **Mac:** Press `Cmd + Option + I` and go to the **Console** tab  
-
-1. Each round, a **prompt dialog** will appear asking you to enter your move:  
-   - **r** or **rock**  
-   - **p** or **paper**  
-   - **s** or **scissors**  
-2. The computer will choose its move automatically.  
-3. The game is played over **5 rounds**.  
-4. After 5 rounds, the final score is displayed and the winner is announced.  
-5. Refresh the page to start a new game.
+1. Open the game in your browser.
+2. Click one of the **buttons** to make your move:
+   - **Rock**  
+   - **Paper**  
+   - **Scissors**  
+3. The **computer** will automatically make its move. 
+4. Your **score** and the **computer’s score** are displayed in each round. 
+5. The **winner** is announced once a player reaches **5 wins**.  
+6. Play another round to start a new game.
 
 ---
 
