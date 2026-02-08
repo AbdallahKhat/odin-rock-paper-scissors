@@ -1,4 +1,6 @@
 const buttons = document.querySelector('.buttons');
+const choices = document.querySelector('.choices')
+const result = document.querySelector('.result');
 
 // Score for the human and computer number of wins throught the game
 let computerScore = 0;
@@ -17,44 +19,44 @@ function getComputerChoice() {
 
 function playRound(computerChoice, humanChoice) {
 
-    console.log(`Computer: ${computerChoice} | Human: ${humanChoice}`);
+    choices.textContent = `Computer: ${computerChoice} | Human: ${humanChoice}`;
 
     switch (computerChoice) {
         case "rock":
             if (humanChoice === "paper") {
-                console.log("You Win!");
+                result.textContent = "You Win!";
                 ++humanScore;
             }
             else if (humanChoice === "scissors") {
-                console.log("You Lose!");
+                result.textContent = "You Lose!";
                 ++computerScore;
             }
-            else { console.log("Draw!"); }
+            else { result.textContent = "Draw!"; }
             break;
 
         case "paper":
             if (humanChoice === "scissors") {
-                console.log("You Win!");
+                result.textContent = "You Win!";
                 ++humanScore;
             }
             else if (humanChoice === "rock") {
-                console.log("You Lose!");
+                result.textContent = "You Lose!";
                 ++computerScore;
             }
-            else { console.log("Draw!"); }
+            else { result.textContent = "Draw!"; }
             break;
 
 
         case "scissors":
             if (humanChoice === "rock") {
-                console.log("You Win!");
+                result.textContent = "You Win!";
                 ++humanScore;
             }
             else if (humanChoice === "paper") {
-                console.log("You Lose!");
+                result.textContent = "You Lose!";
                 ++computerScore;
             }
-            else { console.log("Draw!"); }
+            else { result.textContent = "Draw!"; }
             break;
 
     }
