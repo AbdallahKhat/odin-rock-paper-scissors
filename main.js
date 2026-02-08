@@ -1,3 +1,4 @@
+const buttons = document.querySelector('.buttons');
 
 // Score for the human and computer number of wins throught the game
 let computerScore = 0;
@@ -86,7 +87,16 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
+buttons.addEventListener('click', (e) => {
+    const target = e.target;
 
+    if (target.classList.contains('rock')) {
+        playRound(getComputerChoice(), 'rock');
     }
+    else if (target.classList.contains('paper')) {
+        playRound(getComputerChoice(), 'paper');
     }
+    else if (target.classList.contains('scissors')) {
+        playRound(getComputerChoice(), 'scissors');
     }
+})
