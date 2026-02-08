@@ -1,6 +1,8 @@
 const buttons = document.querySelector('.buttons');
 const choices = document.querySelector('.choices')
 const result = document.querySelector('.result');
+const score = document.querySelector('.score');
+const winner = document.querySelector('.winner');
 
 // Score for the human and computer number of wins throught the game
 let computerScore = 0;
@@ -62,8 +64,27 @@ function playRound(computerChoice, humanChoice) {
     }
 }
 
+function showScore() {
+    score.textContent = `Score: Computer: ${computerScore} | Human: ${humanScore}`;
+}
+
+function showWinner() {
+    if (humanScore == 5) {
+        winner.textContent = "Human wins! play another round to start a new game";
+    }
+    else {
+        winner.textContent = "Computer wins! play another round to start a new game";
+    }
+
+    humanScore = 0;
+    computerScore = 0;
+
+}
+
 buttons.addEventListener('click', (e) => {
     const target = e.target;
+
+    if (computerScore == 0 && humanScore == 0) { winner.textContent = ''; }
 
     if (target.classList.contains('rock')) {
         playRound(getComputerChoice(), 'rock');
@@ -74,4 +95,9 @@ buttons.addEventListener('click', (e) => {
     else if (target.classList.contains('scissors')) {
         playRound(getComputerChoice(), 'scissors');
     }
+
+    showScore();
+
+    if (computerScore == 5 || humanScore == 5) { showWinner(); }
+
 })
