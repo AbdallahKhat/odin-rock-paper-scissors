@@ -29,6 +29,12 @@ This version features a simple GUI with buttons to select moves, a scoreboard, a
 
 ---
 
+## Future Improvements
+
+- Add CSS styling to enhance the visual design.
+
+---
+
 
 ## License
 
