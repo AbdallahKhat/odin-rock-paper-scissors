@@ -15,33 +15,6 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-
-    while (true) {
-        choice = prompt("Choose: r = rock, p = paper, s = scissors");
-
-        //turn answer to lower case to remove case sensitivity
-        choice = choice.toLowerCase();
-
-        switch (choice) {
-            case "r":
-            case "rock":
-                return "rock";
-
-            case "p":
-            case "paper":
-                return "paper";
-
-            case "s":
-            case "scissors":
-                return "scissors";
-
-            default:
-                alert(`'${choice}': No such option. Try again!`);
-        }
-    }
-}
-
 function playRound(computerChoice, humanChoice) {
 
     console.log(`Computer: ${computerChoice} | Human: ${humanChoice}`);
